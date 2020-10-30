@@ -20,9 +20,7 @@ export const GeneralTable: React.FC<IProps> = ({ head, rows }) => {
         {rows.map((x) => (
           <tr>
             <th>{x[0]}</th>
-            {x.map((_, i) => {
-              if (i !== 0) return <td>{x[i]}</td>;
-            })}
+            {x.map((_, i) => (i !== 0 ? <td>{x[i]}</td> : null))}
           </tr>
         ))}
       </tbody>
