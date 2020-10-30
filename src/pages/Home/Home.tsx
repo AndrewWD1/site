@@ -1,9 +1,13 @@
-import React from 'react';
+import React from "react";
+import { Template } from "../Template/Template";
 
 const Home = () => (
-  <div>
-    This is the home
-  </div>
-)
+  <Template>
+    <div>This is the home with template</div>
+    <div>hello</div>
+    <div>hello</div>
+    <div>hello</div>
+  </Template>
+);
 
 export default Home;
