@@ -61,9 +61,9 @@ export const Template: React.FC<IProps> = ({ children }) => {
       >
         <Row>
           <Container>{children[0]}</Container>
-          <Container>{children[1]}</Container>
           <Container>{children[2]}</Container>
           <Container>{children[3]}</Container>
+          <Container>{children[1]}</Container>
         </Row>
       </Container>
     );

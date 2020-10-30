@@ -1,11 +1,11 @@
 import React from "react";
 import Carousel from "react-bootstrap/Carousel";
-import cascade from "../../images/cascade.jpg";
-import baker from "../../images/baker.jpg";
-import squamish from "../../images/squamish.jpg";
+import cascade from "../../../images/cascade.jpg";
+import baker from "../../../images/baker.jpg";
+import squamish from "../../../images/squamish.jpg";
 
 export const ImageCarousel = () => (
-  <Carousel>
+  <Carousel style={{ marginBottom: "1rem" }}>
     <Carousel.Item interval={2000}>
       <img className="d-block w-100 rounded" src={cascade} alt="First slide" />
       <Carousel.Caption style={{ bottom: "unset", top: "20px" }}>
