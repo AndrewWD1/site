@@ -13,7 +13,7 @@ const Professional = () => (
         padding: "1rem",
       }}
     >
-      <h2>Proffesional</h2>
+      <h2>Professional</h2>
       <p>
         I'm a first-year grad student in the Mathematics department at
         CU-Boulder. My math interests are generally in Algebra and Topology. I
