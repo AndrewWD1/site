@@ -24,7 +24,7 @@ const Professional = () => (
     <Container
       style={{
         minHeight: "45%",
-        border: "2px solid black",
+        border: "1px solid black",
         borderRadius: "3px",
         padding: "1rem",
       }}
