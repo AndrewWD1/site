@@ -2,10 +2,11 @@ import React from "react";
 import { ImageCarousel } from "./PersonalComponents/Image_Carousel";
 import { MusicTable, BookTable } from "./PersonalComponents/personal_tables";
 import { Template } from "../Template/Template";
+import { Container } from "react-bootstrap";
 
 const Personal = () => (
   <Template>
-    <>
+    <div>
       <h1>Personal</h1>
       <p>
         My primary personal interests are spending time with my wife Sierra,
@@ -15,16 +16,30 @@ const Personal = () => (
         Sierra and I are incredibly excited to be living in Colorado for the
         forseeable future!
       </p>
-    </>
-    <ImageCarousel />
-    <>
-      <h1 style={{ textAlign: "center" }}>Current Favorite Songs</h1>
+    </div>
+    <Container
+      style={{
+        border: "2px solid black",
+        borderRadius: "3px",
+        marginTop: "1rem",
+        marginBottom: "1rem",
+      }}
+    >
+      <h2 style={{ textAlign: "center" }}>Current Favorite Songs</h2>
       <MusicTable />
-    </>
-    <>
-      <h1 style={{ textAlign: "center" }}>Current Favorite Books</h1>
+    </Container>
+    <ImageCarousel />
+    <Container
+      style={{
+        border: "2px solid black",
+        borderRadius: "3px",
+        marginTop: "1rem",
+        marginBottom: "1rem",
+      }}
+    >
+      <h2 style={{ textAlign: "center" }}>Current Favorite Books</h2>
       <BookTable />
-    </>
+    </Container>
   </Template>
 );
 

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Col, Container, Row } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 
 interface IProps {
   children: React.ReactElement[];
@@ -25,52 +25,55 @@ export const Template: React.FC<IProps> = ({ children }) => {
     return (
       <Container
         style={{
-          padding: "1rem",
           minHeight: `${height}px`,
+          display: "flex",
         }}
         fluid
       >
-        <Row>
-          <Col>
-            <Row>
-              <Container>{children[0]}</Container>
-            </Row>
-            <Row>
-              <Container>{children[1]}</Container>
-            </Row>
-          </Col>
-          {children.length > 2 ? (
-            <Col>
-              <Row>
-                <Container>{children[2]}</Container>
-              </Row>
-              <Row>
-                <Container>{children[3]}</Container>
-              </Row>
-            </Col>
-          ) : null}
-        </Row>
+        <Container
+          fluid
+          style={{
+            width: "50%",
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "space-around",
+          }}
+        >
+          {children[0]}
+          {children.length > 2 ? children[2] : null}
+        </Container>
+        <Container
+          fluid
+          style={{
+            width: "50%",
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "space-around",
+          }}
+        >
+          {children[1]}
+          {children.length > 2 ? children[3] : null}
+        </Container>
       </Container>
     );
   } else {
     return (
       <Container
         style={{
-          padding: "1rem",
           height: `${height}px`,
+          display: "flex",
+          flexDirection: "column",
         }}
         fluid
       >
-        <Row>
-          <Container>{children[0]}</Container>
-          {children.length > 2 ? (
-            <>
-              <Container>{children[2]}</Container>
-              <Container>{children[3]}</Container>
-            </>
-          ) : null}
-          <Container>{children[1]}</Container>
-        </Row>
+        <div style={{ margin: ".5rem" }}>{children[0]}</div>
+        {children.length > 2 ? (
+          <>
+            <div style={{ margin: ".5rem" }}>{children[2]}</div>
+            <div style={{ margin: ".5rem" }}>{children[3]}</div>
+          </>
+        ) : null}
+        <div style={{ margin: ".5rem" }}>{children[1]}</div>
       </Container>
     );
   }
