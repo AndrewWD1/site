@@ -8,7 +8,7 @@ interface IProps {
 
 export const GeneralTable: React.FC<IProps> = ({ head, rows }) => {
   return (
-    <Table striped bordered hover>
+    <Table striped bordered hover size="sm">
       <thead>
         <tr>
           {head.map((x) => (
