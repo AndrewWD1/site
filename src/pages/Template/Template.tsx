@@ -39,14 +39,16 @@ export const Template: React.FC<IProps> = ({ children }) => {
               <Container>{children[1]}</Container>
             </Row>
           </Col>
-          <Col>
-            <Row>
-              <Container>{children[2]}</Container>
-            </Row>
-            <Row>
-              <Container>{children[3]}</Container>
-            </Row>
-          </Col>
+          {children.length > 2 ? (
+            <Col>
+              <Row>
+                <Container>{children[2]}</Container>
+              </Row>
+              <Row>
+                <Container>{children[3]}</Container>
+              </Row>
+            </Col>
+          ) : null}
         </Row>
       </Container>
     );
@@ -61,8 +63,12 @@ export const Template: React.FC<IProps> = ({ children }) => {
       >
         <Row>
           <Container>{children[0]}</Container>
-          <Container>{children[2]}</Container>
-          <Container>{children[3]}</Container>
+          {children.length > 2 ? (
+            <>
+              <Container>{children[2]}</Container>
+              <Container>{children[3]}</Container>
+            </>
+          ) : null}
           <Container>{children[1]}</Container>
         </Row>
       </Container>

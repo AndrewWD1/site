@@ -25,7 +25,7 @@ const App = () => (
               <Nav.Link href="home">Home</Nav.Link>
               <Nav.Link href="professional">Professional</Nav.Link>
               <Nav.Link href="personal">Personal</Nav.Link>
-              <Nav.Link href="https://andrewdoumont.com">Blog</Nav.Link>
+              <Nav.Link href="https://andrewdoumont.netlify.app">Blog</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Navbar>
