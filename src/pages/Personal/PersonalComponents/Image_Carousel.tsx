@@ -8,57 +8,29 @@ import marmot from "../../../images/Marmot_Pass.jpg";
 import baker from "../../../images/MtBaker_Skiing_2017.jpg";
 import index from "../../../images/Index_winter.jpg";
 
+const pictures = [
+  ["Cascade Pass 2018", cascade, "First"],
+  ["Squamish 2018", squamish, "Second"],
+  ["Index Winter 2017", index, "Third"],
+  ["Mount Baker SKiing 2017", baker, "Fourth"],
+  ["Steilacoom, WA 2018", steilacoom, "Fifth"],
+  ["Great Northern Slab 2017", gns, "Sixth"],
+  ["Marmot Pass 2018", marmot, "Seventh"],
+];
+
 export const ImageCarousel = () => (
   <Carousel style={{ marginBottom: "1rem" }}>
-    <Carousel.Item interval={2000}>
-      <img className="d-block w-100 rounded" src={cascade} alt="First slide" />
-      <Carousel.Caption style={{ bottom: "unset", top: "20px" }}>
-        <h3>Cascade Pass 2018</h3>
-      </Carousel.Caption>
-    </Carousel.Item>
-    <Carousel.Item interval={2000}>
-      <img
-        className="d-block w-100 rounded"
-        src={squamish}
-        alt="Second slide"
-      />
-      <Carousel.Caption style={{ bottom: "unset", top: "20px" }}>
-        <h3>Squamish 2018</h3>
-      </Carousel.Caption>
-    </Carousel.Item>
-    <Carousel.Item interval={2000}>
-      <img className="d-block w-100 rounded" src={index} alt="Sixth slide" />
-      <Carousel.Caption style={{ bottom: "unset", top: "20px" }}>
-        <h3>Index Winter 2017</h3>
-      </Carousel.Caption>
-    </Carousel.Item>
-    <Carousel.Item interval={2000}>
-      <img className="d-block w-100 rounded" src={baker} alt="Third slide" />
-      <Carousel.Caption style={{ bottom: "unset", top: "20px" }}>
-        <h3>Mount Baker Skiing 2017</h3>
-      </Carousel.Caption>
-    </Carousel.Item>
-    <Carousel.Item interval={2000}>
-      <img
-        className="d-block w-100 rounded"
-        src={steilacoom}
-        alt="Fourth slide"
-      />
-      <Carousel.Caption style={{ bottom: "unset", top: "20px" }}>
-        <h3>Steilacoom, WA 2017</h3>
-      </Carousel.Caption>
-    </Carousel.Item>
-    <Carousel.Item interval={2000}>
-      <img className="d-block w-100 rounded" src={gns} alt="Fifth slide" />
-      <Carousel.Caption style={{ bottom: "unset", top: "20px" }}>
-        <h3>Great Northern Slab 2017</h3>
-      </Carousel.Caption>
-    </Carousel.Item>
-    <Carousel.Item interval={2000}>
-      <img className="d-block w-100 rounded" src={marmot} alt="Sixth slide" />
-      <Carousel.Caption style={{ bottom: "unset", top: "20px" }}>
-        <h3>Marmot Pass 2018</h3>
-      </Carousel.Caption>
-    </Carousel.Item>
+    {pictures.map((x) => (
+      <Carousel.Item interval={2000}>
+        <img
+          className="d-block w-100 rounded"
+          src={x[1]}
+          alt={`${x[2]} slide`}
+        />
+        <Carousel.Caption style={{ bottom: "unset", top: "20px" }}>
+          <h3>{x[0]}</h3>
+        </Carousel.Caption>
+      </Carousel.Item>
+    ))}
   </Carousel>
 );
