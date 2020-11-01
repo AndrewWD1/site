@@ -40,9 +40,9 @@ const Home = () => (
           <div style={{ fontSize: "large" }}>
             <a href="https://www.linkedin.com/in/andrewwd1/">LinkedIn</a>
           </div>
-          <div style={{ fontSize: "large" }}>
+          {/* <div style={{ fontSize: "large" }}>
             <a href="https://andrewdoumont.com">CV</a>
-          </div>
+          </div> */}
         </div>
       </Container>
     </Container>
