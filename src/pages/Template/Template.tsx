@@ -73,7 +73,9 @@ export const Template: React.FC<IProps> = ({ children }) => {
             <div style={{ margin: ".5rem" }}>{children[3]}</div>
           </>
         ) : null}
-        <div style={{ margin: ".5rem" }}>{children[1]}</div>
+        <div style={{ margin: ".5rem", marginBottom: "1rem" }}>
+          {children[1]}
+        </div>
       </Container>
     );
   }
