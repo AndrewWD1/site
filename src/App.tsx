@@ -33,6 +33,9 @@ const App = () => (
         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
         <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
           <Route path="/home">
             <Home />
           </Route>
@@ -41,10 +44,6 @@ const App = () => (
           </Route>
           <Route path="/personal">
             <Personal />
-          </Route>
-          <Route path="/">
-            {/*This has to go last because it would match with anything */}
-            <Home />
           </Route>
         </Switch>
       </div>
