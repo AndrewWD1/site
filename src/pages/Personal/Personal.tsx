@@ -1,8 +1,15 @@
-import React from "react";
+import React, { CSSProperties } from "react";
 import { ImageCarousel } from "./PersonalComponents/Image_Carousel";
 import { MusicTable, BookTable } from "./PersonalComponents/personal_tables";
 import { Template } from "../Template/Template";
 import { Container } from "react-bootstrap";
+
+const ContainerStyle: CSSProperties = {
+  border: "2px solid black",
+  borderRadius: "3px",
+  marginTop: "1rem",
+  marginBottom: "1rem",
+};
 
 const Personal = () => (
   <Template>
@@ -17,26 +24,15 @@ const Personal = () => (
         forseeable future!
       </p>
     </div>
-    <Container
-      style={{
-        border: "2px solid black",
-        borderRadius: "3px",
-        marginTop: "1rem",
-        marginBottom: "1rem",
-      }}
-    >
+
+    <Container style={ContainerStyle}>
       <h2 style={{ textAlign: "center" }}>Current Favorite Songs</h2>
       <MusicTable />
     </Container>
+
     <ImageCarousel />
-    <Container
-      style={{
-        border: "2px solid black",
-        borderRadius: "3px",
-        marginTop: "1rem",
-        marginBottom: "1rem",
-      }}
-    >
+
+    <Container style={ContainerStyle}>
       <h2 style={{ textAlign: "center" }}>Current Favorite Books</h2>
       <BookTable />
     </Container>

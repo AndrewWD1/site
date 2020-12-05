@@ -1,16 +1,22 @@
-import React, { useEffect, useState } from "react";
+import React, { CSSProperties, useEffect, useState } from "react";
 import { Container } from "react-bootstrap";
 
 interface IProps {
   children: React.ReactElement[];
 }
 
+const ContainerStyle1: CSSProperties = {
+  width: "50%",
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "space-around",
+};
+
 export const Template: React.FC<IProps> = ({ children }) => {
   const [height, setHeight] = useState(100);
   const [width, setWidth] = useState(window.innerWidth);
 
   useEffect(() => {
-    console.log(width);
     let navbarHeight: any = document?.querySelector("#Navbar")?.clientHeight;
 
     setHeight(window.innerHeight - navbarHeight);
@@ -30,29 +36,13 @@ export const Template: React.FC<IProps> = ({ children }) => {
         }}
         fluid
       >
-        <Container
-          fluid
-          style={{
-            width: "50%",
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "space-around",
-          }}
-        >
+        <Container fluid style={ContainerStyle1}>
           {children[0]}
           {children.length > 2 ? children[2] : null}
         </Container>
-        <Container
-          fluid
-          style={{
-            width: "50%",
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "space-around",
-          }}
-        >
+        <Container fluid style={ContainerStyle1}>
           {children[1]}
-          {children.length > 2 ? children[3] : null}
+          {children.length > 3 ? children[3] : null}
         </Container>
       </Container>
     );

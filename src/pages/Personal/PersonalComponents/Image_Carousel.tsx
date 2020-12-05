@@ -20,8 +20,8 @@ const pictures = [
 
 export const ImageCarousel = () => (
   <Carousel style={{ marginBottom: "1rem" }}>
-    {pictures.map((x) => (
-      <Carousel.Item interval={2000}>
+    {pictures.map((x, i) => (
+      <Carousel.Item key={`image-${i}`} interval={2000}>
         <img
           className="d-block w-100 rounded"
           src={x[1]}
