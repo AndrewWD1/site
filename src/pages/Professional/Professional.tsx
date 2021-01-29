@@ -16,9 +16,8 @@ const Professional = () => (
       <h2>Professional</h2>
       <p>
         I'm a first year grad student in the Mathematics department at
-        CU-Boulder. My math interests are generally in Algebra and Topology, but
-        I also find interests in many areas outside of mathematics and hope to
-        be able to bridge some of those gaps eventually.
+        CU-Boulder. My math interests are generally in Topology. I'm
+        also interested in Computer Science and Philosophy.
       </p>
     </Container>
 
