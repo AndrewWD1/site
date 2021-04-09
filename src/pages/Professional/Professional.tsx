@@ -16,8 +16,8 @@ const Professional = () => (
       <h2>Professional</h2>
       <p>
         I'm a first year grad student in the Mathematics department at
-        CU-Boulder. My math interests are generally in Topology. I'm
-        also interested in Computer Science and Philosophy.
+        CU-Boulder. My math interests are generally in Topology. I'm also
+        interested in Computer Science and Philosophy.
       </p>
     </Container>
 
@@ -27,9 +27,18 @@ const Professional = () => (
         head={["Semester", "Course", "Sections"]}
         rows={[
           ["FALL 2020", "Calculus II TA (MATH-2300)", "003, 006, 009"],
-          ["SPRING 2021", "Calculus I TA (MATH-2300)", ""],
+          ["SPRING 2021", "Calculus I TA (MATH-2300)", "002, 003, 010"],
         ]}
       />
+      <br />
+      <div style={{ borderTop: "1px solid black" }}></div>
+      <br />
+      <h2>Research</h2>
+        <ul>
+          <li>
+            <i>(Future)</i> Summer 2021 reasearch project on Topological Data Analysis
+          </li>
+        </ul>
       <br />
       <div style={{ borderTop: "1px solid black" }}></div>
       <br />
