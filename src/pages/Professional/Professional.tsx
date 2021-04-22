@@ -13,11 +13,16 @@ const ContainerStyle: CSSProperties = {
 const Professional = () => (
   <Template>
     <Container style={ContainerStyle}>
-      <h2>Professional</h2>
+      <h2>About Me</h2>
       <p>
         I'm a first year grad student in the Mathematics department at
         CU-Boulder. My math interests are generally in Topology. I'm also
-        interested in Computer Science and Philosophy.
+        interested in Philosophy and Computer Science. I believe, as
+        Poincar&eacute; put it, that "...the most interesting facts are those
+        which may serve many times; these are the facts which have a chance of
+        coming up again. We have been so fortunate as to be born in a world
+        where there are such." That is why I have been drawn to mathematics,
+        where the facts are the most general and most reusable.
       </p>
     </Container>
 
@@ -34,11 +39,12 @@ const Professional = () => (
       <div style={{ borderTop: "1px solid black" }}></div>
       <br />
       <h2>Research</h2>
-        <ul>
-          <li>
-            <i>(Future)</i> Summer 2021 reasearch project on Topological Data Analysis
-          </li>
-        </ul>
+      <ul>
+        <li>
+          <i>(Future)</i> Summer 2021 reasearch project on Topological Data
+          Analysis
+        </li>
+      </ul>
       <br />
       <div style={{ borderTop: "1px solid black" }}></div>
       <br />
@@ -58,9 +64,8 @@ const Professional = () => (
 
     <Container style={ContainerStyle}>
       <h2>Blog</h2>I have a{" "}
-      <a href="https://andrewdoumont.netlify.app">blog.</a> It's filled with
-      many half finished thoughts and ideas. I hope to write more about my
-      interests of math, philosophy, and generally things happening in my life.
+      <a href="https://andrewdoumont.netlify.app">blog.</a> It's filled primarily
+      with half finished thoughts and ideas. I hope to write more about math, philosophy, and generally things happening in my life.
       It's built with Gatsby and hosted of Netlify.
     </Container>
   </Template>
