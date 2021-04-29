@@ -40,29 +40,9 @@ const Professional = () => (
           ["SPRING 2021", "Calculus I TA (MATH-2300)", "002, 003, 010"],
         ]}
       />
-      <br />
-      <div style={{ borderTop: "1px solid black" }}></div>
-      <h2>Blog</h2>I have a{" "}
-      <a href="https://andrewdoumont.netlify.app">blog.</a> It's filled
-      primarily with half finished thoughts and ideas. I hope to write more
-      about math, philosophy, and generally things happening in my life. It's
-      built with Gatsby and hosted of Netlify.
-      <br />
-      <br />
-      <div style={{ borderTop: "1px solid black" }}></div>
-      <h2>Tutoring</h2>
-      <ul>
-        <li>I can tutor elementary through undergraduate mathematics.</li>
-        <li>My rate is $30/hour.</li>
-        <li>
-          My preferance is to tutor evenings Sunday-Friday, but we can work out
-          something mutually beneficial.
-        </li>
-        <li>
-          Contact me at <strong>andrew.doumont@colorado.edu</strong>
-        </li>
-      </ul>
     </Container>
+
+    
 
     <Container style={ContainerStyle}>
       <h2>Papers</h2>
@@ -78,10 +58,27 @@ const Professional = () => (
       <h2>Research</h2>
       <ul>
         <li>
-          <i>(Future)</i> Summer 2021 reasearch project on Topological Data
+          Summer 2021 reasearch project on Topological Data
           Analysis
         </li>
       </ul>
+    </Container>
+
+    <Container style={ContainerStyle}>
+    
+      <h2>Tutoring</h2>
+      <ul>
+        <li>I can tutor elementary through undergraduate mathematics.</li>
+        <li>My rate is $30/hour.</li>
+        <li>
+          My preferance is to tutor evenings Sunday-Friday, but we can work out
+          something mutually beneficial.
+        </li>
+        <li>
+          Contact me at <strong>andrew.doumont@colorado.edu</strong>
+        </li>
+      </ul>
+
     </Container>
   </Template>
 );
