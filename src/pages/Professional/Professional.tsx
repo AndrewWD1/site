@@ -10,6 +10,11 @@ const ContainerStyle: CSSProperties = {
   padding: "1rem",
 };
 
+
+const LinkStyle: CSSProperties = {
+  textDecoration: "none",
+};
+
 const Professional = () => (
   <Template>
     <Container style={ContainerStyle}>
@@ -37,17 +42,14 @@ const Professional = () => (
       />
       <br />
       <div style={{ borderTop: "1px solid black" }}></div>
+      <h2>Blog</h2>I have a{" "}
+      <a href="https://andrewdoumont.netlify.app">blog.</a> It's filled
+      primarily with half finished thoughts and ideas. I hope to write more
+      about math, philosophy, and generally things happening in my life. It's
+      built with Gatsby and hosted of Netlify.
       <br />
-      <h2>Research</h2>
-      <ul>
-        <li>
-          <i>(Future)</i> Summer 2021 reasearch project on Topological Data
-          Analysis
-        </li>
-      </ul>
       <br />
       <div style={{ borderTop: "1px solid black" }}></div>
-      <br />
       <h2>Tutoring</h2>
       <ul>
         <li>I can tutor elementary through undergraduate mathematics.</li>
@@ -63,10 +65,23 @@ const Professional = () => (
     </Container>
 
     <Container style={ContainerStyle}>
-      <h2>Blog</h2>I have a{" "}
-      <a href="https://andrewdoumont.netlify.app">blog.</a> It's filled primarily
-      with half finished thoughts and ideas. I hope to write more about math, philosophy, and generally things happening in my life.
-      It's built with Gatsby and hosted of Netlify.
+      <h2>Papers</h2>
+      <a
+        style={LinkStyle}
+        href="https://github.com/AndrewWD1/Basic-Sheaf-Cohomology-Paper/blob/main/Paper/Sheaf_Cohomology_Intro.pdf"
+      >
+        Basic Sheaf Cohomology
+      </a>{" "}
+      <br />
+      <br />
+      <div style={{ borderTop: "1px solid black" }}></div>
+      <h2>Research</h2>
+      <ul>
+        <li>
+          <i>(Future)</i> Summer 2021 reasearch project on Topological Data
+          Analysis
+        </li>
+      </ul>
     </Container>
   </Template>
 );
