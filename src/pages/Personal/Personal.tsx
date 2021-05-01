@@ -16,12 +16,8 @@ const Personal = () => (
     <div>
       <h1>Personal</h1>
       <p>
-        My primary personal interests are spending time with my wife Sierra,
-        rock-climbing, skiing, hiking, running, and music. I enjoy spending time
-        outdoors and really cherished the 3 years Sierra and I got to spend in
-        the Pacific Northwest while I was stationed at Joint Base Lewis-McChord.
-        Sierra and I are incredibly excited to be living in Colorado for the
-        forseeable future!
+        I'm an avid skier, rock climber, and hiker. I post about some adventures
+        on my <a href="https://andrewdoumont.netlify.app/">blog</a>.
       </p>
     </div>
 
