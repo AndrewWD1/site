@@ -10,7 +10,6 @@ const ContainerStyle: CSSProperties = {
   padding: "1rem",
 };
 
-
 const LinkStyle: CSSProperties = {
   textDecoration: "none",
 };
@@ -42,8 +41,6 @@ const Professional = () => (
       />
     </Container>
 
-    
-
     <Container style={ContainerStyle}>
       <h2>Papers</h2>
       <a
@@ -56,16 +53,10 @@ const Professional = () => (
       <br />
       <div style={{ borderTop: "1px solid black" }}></div>
       <h2>Research</h2>
-      <ul>
-        <li>
-          Summer 2021 reasearch project on Topological Data
-          Analysis
-        </li>
-      </ul>
+      <div>Summer 2021 reasearch project on Topological Data Analysis</div>
     </Container>
 
     <Container style={ContainerStyle}>
-    
       <h2>Tutoring</h2>
       <ul>
         <li>I can tutor elementary through undergraduate mathematics.</li>
@@ -78,7 +69,6 @@ const Professional = () => (
           Contact me at <strong>andrew.doumont@colorado.edu</strong>
         </li>
       </ul>
-
     </Container>
   </Template>
 );

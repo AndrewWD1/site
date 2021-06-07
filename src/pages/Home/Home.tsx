@@ -36,8 +36,7 @@ const Home = () => {
       >
         <h1>Welcome</h1>
         <div>
-          I'm a first year graduate student in the math department at CU-Boulder
-          interested in Topology and Algebra.
+          I'm a first year graduate student in the math department at CU-Boulder.
         </div>
         <Container
           style={{
@@ -54,7 +53,6 @@ const Home = () => {
           <h3>Contact Info</h3>
           <div>
             <div style={{ fontSize: "large" }}>andrew.doumont@colorado.edu</div>
-            <div style={{ fontSize: "large" }}>andrew.doumont@gmail.com</div>
             <div style={{ fontSize: "large" }}>
               <a href="https://github.com/andrewwd1">Github</a>
             </div>
