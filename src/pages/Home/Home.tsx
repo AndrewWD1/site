@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { Container } from "react-bootstrap";
 import Image from "react-bootstrap/esm/Image";
 import { Template } from "../Template/Template";
-import tetonPass from "../../images/teton_pass.jpg";
+import jasperLake from "../../images/Jasper_Lake.jpg";
 
 const Home = () => {
   useEffect(() => {
@@ -36,7 +36,8 @@ const Home = () => {
       >
         <h1>Welcome</h1>
         <div>
-          I'm a first year graduate student in the math department at CU-Boulder.
+          I'm a first year graduate student in the math department at
+          CU-Boulder.
         </div>
         <Container
           style={{
@@ -78,7 +79,7 @@ const Home = () => {
           fluid
           style={{ border: ".1px solid black" }}
           className="rounded"
-          src={tetonPass}
+          src={jasperLake}
         />
       </Container>
     </Template>
