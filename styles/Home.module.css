@@ -23,3 +23,17 @@
 .navList li {
   padding: 0 0.5rem;
 }
+
+.imgBackground {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: -1;
+
+  object-fit: cover;
+
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
