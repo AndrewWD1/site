@@ -1,5 +1,18 @@
 .container {
-  padding: 0 2rem;
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
+  border-radius: 5px;
+  color: #fff;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  width: 70%;
+}
+
+.containerList {
+  list-style-position: inside;
+}
+
+.whitelink:hover {
+  text-decoration: underline;
 }
 
 .nav {
@@ -36,4 +49,8 @@
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
+}
+
+.borderLine {
+  border-top: 1px solid #fff;
 }
