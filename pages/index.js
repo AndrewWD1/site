@@ -1,25 +1,10 @@
-import Link from "next/link";
+import Nav from "../components/nav";
 import styles from "../styles/Home.module.css";
 
 export default function Home() {
   return (
     <main>
-      <nav className={styles.nav}>
-        <Link className={styles.title} href="/">
-          Andrew Doumont
-        </Link>
-        <ul className={styles.navList}>
-          <li>
-            <Link href="/math">math</Link>
-          </li>
-          <li>
-            <Link href="/teaching">teaching</Link>
-          </li>
-          <li>
-            <Link href="/blog">blog</Link>
-          </li>
-        </ul>
-      </nav>
+      <Nav />
       <div className={styles.container}>Hello</div>
     </main>
   );

@@ -1,3 +1,6 @@
+import Link from "next/link";
+import styles from "../styles/Home.module.css";
+
 export default function Nav() {
   return (
     <nav className={styles.nav}>
@@ -6,13 +9,13 @@ export default function Nav() {
       </Link>
       <ul className={styles.navList}>
         <li>
-          <Link href="/math">math</Link>
+          <Link href="/math">Math</Link>
         </li>
         <li>
-          <Link href="/teaching">teaching</Link>
+          <Link href="/teaching">Teaching</Link>
         </li>
         <li>
-          <Link href="/blog">blog</Link>
+          <Link href="/blog">Blog</Link>
         </li>
       </ul>
     </nav>
