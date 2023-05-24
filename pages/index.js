@@ -7,25 +7,27 @@ export default function Home() {
   return (
     <>
       <Nav />
+      <Image
+        src={bp}
+        width={1000}
+        height={1000}
+        className={styles.imgBackground}
+        alt="Picture of the author"
+      />
       <main>
-        <Image
-          src={bp}
-          width={1000}
-          height={1000}
-          className={styles.imgBackground}
-          alt="Picture of the author"
-        />
-        <div>
+        <div className={styles.container}>
           <h1>Welcome</h1>
-          <ul>
+          <ul className={styles.containerList}>
             <li>{"I'm"} Andrew Doumont.</li>
             <li>
               {"I'm"} a graduate student in the math department at CU-Boulder.
             </li>
             <li>
-              My
-              <a href="https://github.com/AndrewWD1/CV/blob/main/Doumont_CV.pdf">
-                {" "}
+              My{" "}
+              <a
+                href="https://github.com/AndrewWD1/CV/blob/main/Doumont_CV.pdf"
+                className={styles.whitelink}
+              >
                 CV
               </a>
             </li>
