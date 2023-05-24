@@ -1,6 +1,7 @@
 import Nav from "../components/nav";
 import styles from "../styles/Home.module.css";
 import Image from "next/image";
+import bp from "../public/static/images/berthoudpass.jpg";
 
 export default function Home() {
   return (
@@ -8,7 +9,7 @@ export default function Home() {
       <Nav />
       <main>
         <Image
-          src="/../public/static/images/berthoud_pass.jpg"
+          src={bp}
           width={1000}
           height={1000}
           className={styles.imgBackground}
