@@ -1,5 +1,5 @@
 import Nav from "../../components/nav";
-import styles from "../../styles/Home.module.css";
+import styles from "../../styles/Blog.module.css";
 import Link from "next/link";
 
 import fs from "fs";
@@ -14,14 +14,18 @@ export default function Home({ posts }) {
       <Nav />
       <main>
         <div>
-          <h1>Blog Entries</h1>
+          <h1>Entries</h1>
           <ul>
             {posts.map((post) => {
               return (
                 <li key={post.id}>
-                  <Link href={`/blog/${removeFileExtension(post.id)}`}>
-                    {post.title}
+                  <Link
+                    className={styles.blogListLink}
+                    href={`/blog/${removeFileExtension(post.id)}`}
+                  >
+                    <h3>{post.title}</h3>
                   </Link>
+                  <div>{new Date(post.date).toLocaleDateString()}</div>
                 </li>
               );
             })}

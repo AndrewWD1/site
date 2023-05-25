@@ -1,0 +1,32 @@
+---
+title: Fishing
+date: 2023-05-25
+---
+
+import Image from 'next/image'
+import BlogPostLayout from "../../components/blogPostLayout.js"
+import styles from "../../styles/Blog.module.css"
+
+import fh from "../../public/static/images/Fishing/fh.jpg";
+
+
+
+# Fishing
+
+I have been kind of interested in fishing since going with my brother a couple times and going with my Father-in-law once. I wasn't super stoked on it at first, but have found it to be a fun little diversion and a great way to get out and enjoy a place. 
+
+I like keeping it pretty simple, just the rod/reel/line, some flies, and thats realy it. I don't have waiders, and this can really limit where I'm able to fish, but I love the simplicity of it. If I were to do it again I might consider getting a tenkara line to keep things really simple, but I really kind of just inherited my setup from my brother who fishes quite a bit and knows much more than I do.
+
+I'm very happy to have found a spot that I really love to fish, thats small enough to cast from the bank, that isn't too far of a drive and was happy to have a caught a nice little trout in it a couple days ago.
+
+<Image
+  src={fh}
+  className={styles.image}
+  alt="Turkey Rocks"
+/>
+
+
+export default ({ children }) => (
+  <BlogPostLayout >{children}</BlogPostLayout>
+);
+ 

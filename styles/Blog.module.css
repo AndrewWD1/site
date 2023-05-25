@@ -1,3 +1,12 @@
+.blogListLink {
+  color: #0f4d7a;
+  font-size: 1.2rem;
+}
+
+.blogListLink:hover {
+  text-decoration: underline;
+}
+
 .image {
   display: block;
   width: 100%;
