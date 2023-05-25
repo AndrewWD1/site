@@ -15,20 +15,13 @@
 
 .H1 {
   margin: 0 0 1.45rem 0;
-}
-.H2 {
-  margin: 0 0 1.45rem 0;
-}
-.P {
-  margin: 0 0 1.45rem 0;
-}
-
-.H1 {
   font-size: 2rem;
   line-height: 1.1;
 }
-
 .H2 {
   font-size: 1.62671rem;
   line-height: 1.1;
+}
+.P {
+  margin: 0 0 1.45rem 0;
 }
