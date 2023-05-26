@@ -15,10 +15,10 @@ export default function Home({ posts }) {
       <main>
         <div>
           <h1>Entries</h1>
-          <ul>
+          <ul className={styles.blogList}>
             {posts.map((post) => {
               return (
-                <li key={post.id}>
+                <li key={post.id} className={styles.blogListItem}>
                   <Link
                     className={styles.blogListLink}
                     href={`/blog/${removeFileExtension(post.id)}`}
@@ -26,6 +26,7 @@ export default function Home({ posts }) {
                     <h3>{post.title}</h3>
                   </Link>
                   <div>{new Date(post.date).toLocaleDateString()}</div>
+                  <p>{post.excerpt}</p>
                 </li>
               );
             })}
@@ -37,6 +38,19 @@ export default function Home({ posts }) {
 }
 
 const postsDirectory = path.join(process.cwd(), "pages/blog");
+
+const firstFourLines = (file, options) => {
+  file.excerpt =
+    file.content
+      .split("\n")
+      .filter((x) => x[0] != "#")
+      .join(" ")
+      .slice(0, 100)
+      .split("")
+      .filter((x) => x != "\r")
+      .join("")
+      .trim() + "...";
+};
 
 export async function getStaticProps() {
   const fileNames1 = fs.readdirSync(postsDirectory);
@@ -51,12 +65,14 @@ export async function getStaticProps() {
     const fileContents = fs.readFileSync(fullPath, "utf8");
 
     // Use gray-matter to parse the post metadata section
-    const matterResult = matter(fileContents);
+    const matterResult = matter(fileContents, { excerpt: firstFourLines });
+    console.log(matterResult);
 
     // Combine the data with the i
     return {
       id,
       ...matterResult.data,
+      excerpt: matterResult.excerpt,
     };
   });
 
