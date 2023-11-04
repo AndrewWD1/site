@@ -2,6 +2,7 @@
 title: Finished Comprehensive Exam
 date: 2023-05-21
 ---
+
 # Finished Comprehensive Exam
 
 ## Comprehensive Exam, 9 May
@@ -12,19 +13,12 @@ The second major obstacle in the Math PhD program here is the comprehensive exam
 
 Sierra and I spend a weekend in Woodland Park, CO climbing at Turkey Rocks which has beautiful splitter cracks. This is me preparing some gear for sending Gobble Up (5.8, hand/fist/offwidth) and Steppenwolf (5.9, offwidth/thin hands), the two prominent cracks in front of me.
 
-<Image
-  src={tr}
-  className={styles.image}
-  alt="Turkey Rocks"
-/>
+<Image src={tr} className={styles.image} alt="Turkey Rocks" />
 
-export default ({ children }) => (
-  <BlogPostLayout >{children}</BlogPostLayout>
-);
- 
- 
-import Image from 'next/image'
-import BlogPostLayout from "../../components/blogPostLayout.js"
-import styles from "../../styles/Blog.module.css"
+export default ({ children }) => <BlogPostLayout>{children}</BlogPostLayout>;
+
+import Image from "next/image";
+import BlogPostLayout from "../../components/blogPostLayout.js";
+import styles from "../../styles/Blog.module.css";
 
 import tr from "../../public/static/images/Finished_Comp/tr.jpg";
