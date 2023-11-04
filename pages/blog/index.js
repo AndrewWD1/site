@@ -13,8 +13,8 @@ export default function Home({ posts }) {
     <>
       <Nav />
       <main>
-        <div>
-          <h1>Entries</h1>
+        <div className={styles.listContainer}>
+          <h1 className={styles.H1}>Entries</h1>
           <ul className={styles.blogList}>
             {posts.map((post) => {
               return (
@@ -25,8 +25,8 @@ export default function Home({ posts }) {
                   >
                     <h3>{post.title}</h3>
                   </Link>
-                  <div>{new Date(post.date).toLocaleDateString()}</div>
-                  <p>{post.excerpt}</p>
+                  <div className={styles.blogPostDate}>{new Date(post.date).toLocaleDateString()}</div>
+                  <p className={styles.blogPostDescription}>{post.excerpt}</p>
                 </li>
               );
             })}
@@ -49,7 +49,7 @@ const firstFourLines = (file, options) => {
       .map(x => x.split(">"))
       .map(x => x.length > 1 ? x[1] : x[0])
       .join("")
-      .slice(0, 100)
+      .slice(0, 200)
       .split("")
       .filter((x) => x != "\r")
       .join("")
