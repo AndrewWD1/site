@@ -1,4 +1,4 @@
-import Nav from "../components/nav";
+import Nav from "./nav";
 import styles from "../styles/Blog.module.css";
 import { MDXProvider } from "@mdx-js/react";
 
@@ -27,7 +27,17 @@ export default function BlogPostLayout({ children }) {
     <>
       <Nav />
       <MDXProvider components={components}>
-        <div className={styles.blogContainer}>{children}</div>
+        <div className={styles.blogContainer}>
+          {children}
+          <div className={styles.divider}></div>
+          <footer>
+            <div>
+              © {new Date().getFullYear()}, Built with
+              {` `}
+              <a href="https://nextjs.org/">Next.js</a>
+            </div>
+          </footer>
+        </div>
       </MDXProvider>
     </>
   );
