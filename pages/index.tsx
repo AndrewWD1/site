@@ -2,8 +2,15 @@ import Nav from "../components/nav";
 import styles from "../styles/Home.module.css";
 import Image from "next/image";
 import bp from "../public/static/images/berthoudpass.jpg";
+import { useEffect } from "react";
 
 export default function Home() {
+  useEffect(() => {
+    fetch("https://flaskserver.andrewdoumont.repl.co/name/site").catch(
+      (error) => console.error(error)
+    );
+  }, []);
+
   return (
     <>
       <Nav />
@@ -22,10 +29,11 @@ export default function Home() {
               {"I'm"} a graduate student in the math department at CU-Boulder.
             </li>
             <li>
-              I study symplectic manifolds and my advisor is Professor Markus Pflaum.
+              I study symplectic manifolds and my advisor is Professor Markus
+              Pflaum.
             </li>
             <li>
-              You can find my CV {" "}
+              You can find my CV{" "}
               <a
                 href="https://github.com/AndrewWD1/CV/blob/main/Doumont_CV.pdf"
                 className={styles.whitelink}
@@ -41,7 +49,10 @@ export default function Home() {
           <span>(not published)</span>
           <ul className={styles.containerList}>
             <li>
-              <a className={styles.whitelink} href="https://ad-site.netlify.app/static/Sheaf_Cohomology_Intro.pdf">
+              <a
+                className={styles.whitelink}
+                href="https://ad-site.netlify.app/static/Sheaf_Cohomology_Intro.pdf"
+              >
                 Basic Sheaf Cohomology
               </a>{" "}
             </li>

@@ -2,6 +2,7 @@ import Nav from "../../components/nav";
 import styles from "../../styles/Blog.module.css";
 import Link from "next/link";
 
+import React from "react";
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
@@ -25,7 +26,9 @@ export default function Home({ posts }) {
                   >
                     <h3>{post.title}</h3>
                   </Link>
-                  <div className={styles.blogPostDate}>{new Date(post.date).toLocaleDateString()}</div>
+                  <div className={styles.blogPostDate}>
+                    {new Date(post.date).toLocaleDateString()}
+                  </div>
                   <p className={styles.blogPostDescription}>{post.excerpt}</p>
                 </li>
               );
@@ -46,21 +49,27 @@ const firstFourLines = (file, options) => {
       .filter((x) => x[0] != "#")
       .join(" ")
       .split("<")
-      .map(x => x.split(">"))
-      .map(x => x.length > 1 ? x[1] : x[0])
+      .map((x) => x.split(">"))
+      .map((x) => (x.length > 1 ? x[1] : x[0]))
       .join("")
       .slice(0, 200)
       .split("")
       .filter((x) => x != "\r")
       .join("")
       .trim() + "...";
+
+  return "";
 };
 
 export async function getStaticProps() {
   const fileNames1 = fs.readdirSync(postsDirectory);
-  const fileNames = fileNames1.filter((x) => x != "index.js");
+  const fileNames = fileNames1.filter((x) => x != "index.tsx");
 
-  const allPostsData = fileNames.map((fileName) => {
+  const allPostsData: {
+    excerpt: string | undefined;
+    id: string;
+    date: Date;
+  }[] = fileNames.map((fileName) => {
     // Remove ".md" from file name to get id
     const id = fileName.replace(/\.md$/, "");
 
@@ -75,6 +84,7 @@ export async function getStaticProps() {
     // Combine the data with the i
     return {
       id,
+      date: matterResult.data.date,
       ...matterResult.data,
       excerpt: matterResult.excerpt,
     };
