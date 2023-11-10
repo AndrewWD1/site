@@ -79,7 +79,6 @@ export async function getStaticProps() {
 
     // Use gray-matter to parse the post metadata section
     const matterResult = matter(fileContents, { excerpt: firstFourLines });
-    console.log(matterResult);
 
     // Combine the data with the i
     return {
