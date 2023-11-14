@@ -27,7 +27,7 @@ export default function Home({ posts }) {
                     <h3>{post.title}</h3>
                   </Link>
                   <div className={styles.blogPostDate}>
-                    {new Date(post.date).toDateString()}
+                    {new Date(post.date).toDateString().slice(4)}
                   </div>
                   <p className={styles.blogPostDescription}>{post.excerpt}</p>
                 </li>
