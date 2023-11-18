@@ -42,11 +42,10 @@ export default function Home() {
               </a>
             </li>
           </ul>
-          <br />
+          {/* <br />
           <div className={styles.borderLine}></div>
           <br />
-          <h2>Papers</h2>
-          <span>(not published)</span>
+          <h2>Talk Notes</h2>
           <ul className={styles.containerList}>
             <li>
               <a
@@ -56,7 +55,7 @@ export default function Home() {
                 Basic Sheaf Cohomology
               </a>{" "}
             </li>
-          </ul>
+          </ul> */}
         </div>
       </main>
     </>
