@@ -5,12 +5,6 @@ import bp from "../public/static/images/berthoudpass.jpg";
 import { useEffect } from "react";
 
 export default function Home() {
-  useEffect(() => {
-    fetch("https://flaskserver.andrewdoumont.repl.co/name/site").catch(
-      (error) => console.error(error)
-    );
-  }, []);
-
   return (
     <>
       <Nav />

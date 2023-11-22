@@ -2,7 +2,7 @@ import Nav from "../../components/nav";
 import styles from "../../styles/Blog.module.css";
 import Link from "next/link";
 
-import React from "react";
+import React, { useEffect } from "react";
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
