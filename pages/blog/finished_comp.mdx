@@ -7,7 +7,7 @@ date: 2023-05-21
 
 ## Comprehensive Exam, 9 May
 
-The second major obstacle in the Math PhD program here is the comprehensive exam. This is an oral exam with a sylabbus designed in coordination with your advisor. The main topics that were on my syllabus were homology (singular homology, cellular homology and computations, cohomology, universal coefficient theorem, etc.) and Reimannian Geometry (general definitions and properties, connections, geodesics, Levi-Civita connection, etc.). My comp started with me giving a talk on Floer Homology and its use in proving the Arnold Conjecture, and then the committee asked me questions about the other topics. 
+The second major obstacle in the Math PhD program here is the comprehensive exam. This is an oral exam with a sylabbus designed in coordination with your advisor. The main topics that were on my syllabus were homology (singular homology, cellular homology and computations, cohomology, universal coefficient theorem, etc.) and Reimannian Geometry (general definitions and properties, connections, geodesics, Levi-Civita connection, etc.). My comp started with me giving a talk on Floer Homology and its use in proving the Arnold Conjecture, and then the committee asked me questions about the other topics.
 
 ## Turkey Rocks, 20-21 May
 
@@ -17,27 +17,37 @@ Sierra and I spent a weekend in Woodland Park, CO climbing at Turkey Rocks: an a
 
 ## Rest of the Summer and Fall
 
-Excited for the winter and skiing now, but reflecting on some of the great times over the last few months: backpacking in the Sangre de Cristo Range, fly fishing, skiing Grays Peak in perfect summer conditions on June 24, roadtripping and camping in Squamish, climbing the Squamish Buttress and Angle's Crest, and hiking with Sierra.   
+Excited for the winter and skiing now, but reflecting on some of the great times over the last few months: backpacking in the Sangre de Cristo Range, fly fishing, skiing Grays Peak in perfect summer conditions on June 24, roadtripping and camping in Squamish, climbing the Squamish Buttress and Angle's Crest, and hiking with Sierra.
 
 <Image src={humboldt} className={styles.image} alt="Humboldt Trip" />
 <Image src={humboldt1} className={styles.image} alt="Humboldt Trip" />
 
+<Image
+  src={southplatte}
+  className={styles.image}
+  alt="Fishing a beautiful high country stream"
+/>
 
-<Image src={southplatte} className={styles.image} alt="Fishing a beautiful high country stream" />
+<Image
+  src={grays}
+  className={styles.image}
+  alt="Nice late ski trip on Grays Peak"
+/>
 
-<Image src={grays} className={styles.image} alt="Nice late ski trip on Grays Peak" />
-
-<Image src={icicle} className={styles.image} alt="Looking up Icile Creek Road" />
+<Image
+  src={icicle}
+  className={styles.image}
+  alt="Looking up Icile Creek Road"
+/>
 <Image src={estu} className={styles.image} alt="Squamish Estuary" />
 <Image src={estu1} className={styles.image} alt="Squamish Estuary" />
 <Image src={camp} className={styles.image} alt="Squamish Camping spot" />
 
-
-
 <Image src={coon} className={styles.image} alt="Hiking with Sierra" />
 <Image src={hessie} className={styles.image} alt="Hiking with Sierra" />
 
-
+{/* ts believes this is a second defauly export */}
+@ts-ignore
 export default ({ children }) => <BlogPostLayout>{children}</BlogPostLayout>;
 
 import Image from "next/image";
@@ -60,3 +70,5 @@ import camp from "../../public/static/images/Finished_Comp/camp.jpg";
 
 import coon from "../../public/static/images/Finished_Comp/coon.jpg";
 import hessie from "../../public/static/images/Finished_Comp/hessie.jpg";
+
+;
