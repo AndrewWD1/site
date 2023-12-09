@@ -2,7 +2,6 @@ import Nav from "../components/nav";
 import styles from "../styles/Home.module.css";
 import Image from "next/image";
 import bp from "../public/static/images/berthoudpass.jpg";
-import { useEffect } from "react";
 
 export default function Home() {
   return (
