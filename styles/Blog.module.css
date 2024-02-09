@@ -74,3 +74,23 @@
   border-top: 1px solid black;
   margin-top: 3rem;
 }
+
+.pageChangeContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.pageChangeButton {
+  background: none;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  color: rgb(15, 77, 122);
+  font-size: 1rem;
+}
+
+.pageChangeButton:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}

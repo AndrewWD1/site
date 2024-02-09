@@ -2,14 +2,20 @@ import Nav from "../../components/nav";
 import styles from "../../styles/Blog.module.css";
 import Link from "next/link";
 
-import React, { useEffect } from "react";
+import React, { useState } from "react";
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 
-const removeFileExtension = (str) => str.replace(/\.(.*)/g, "");
+import { useRouter } from "next/navigation";
+import PageChangeContainer from "../../components/pageChangeContainer";
 
-export default function Home({ posts }) {
+const removeFileExtension = (str: string) => str.replace(/\.(.*)/g, "");
+
+export default function Home({ posts }: { posts: any[] }) {
+  const numberOfPages = posts.length / 4;
+  const [pageNumber, setPageNumber] = useState(0);
+
   return (
     <>
       <Nav />
@@ -17,7 +23,7 @@ export default function Home({ posts }) {
         <div className={styles.listContainer}>
           <h1 className={styles.H1}>Entries</h1>
           <ul className={styles.blogList}>
-            {posts.map((post) => {
+            {posts.slice(pageNumber, pageNumber + 4).map((post) => {
               return (
                 <li key={post.id} className={styles.blogListItem}>
                   <Link
@@ -34,6 +40,11 @@ export default function Home({ posts }) {
               );
             })}
           </ul>
+          <PageChangeContainer
+            numberOfPages={numberOfPages}
+            pageNumber={pageNumber}
+            setPageNumber={setPageNumber}
+          />
         </div>
       </main>
     </>
@@ -46,15 +57,15 @@ const firstFourLines = (file, options) => {
   file.excerpt =
     file.content
       .split("\n")
-      .filter((x) => x[0] != "#")
+      .filter((x: string[]) => x[0] != "#")
       .join(" ")
       .split("<")
-      .map((x) => x.split(">"))
-      .map((x) => (x.length > 1 ? x[1] : x[0]))
+      .map((x: string) => x.split(">"))
+      .map((x: string[]) => (x.length > 1 ? x[1] : x[0]))
       .join("")
       .slice(0, 200)
       .split("")
-      .filter((x) => x != "\r")
+      .filter((x: string) => x != "\r")
       .join("")
       .trim() + "...";
 
