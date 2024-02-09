@@ -26,12 +26,12 @@ export default function Home() {
               Pflaum.
             </li>
             <li>
-              You can find my CV{" "}
+              You can find my{" "}
               <a
                 href="https://github.com/AndrewWD1/CV/blob/main/Doumont_CV.pdf"
                 className={styles.whitelink}
               >
-                here.
+                CV here.
               </a>
             </li>
           </ul>
