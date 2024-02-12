@@ -7,7 +7,6 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 
-import { useRouter } from "next/navigation";
 import PageChangeContainer from "../../components/pageChangeContainer";
 
 const removeFileExtension = (str: string) => str.replace(/\.(.*)/g, "");
