@@ -35,20 +35,6 @@ export default function Home() {
               </a>
             </li>
           </ul>
-          {/* <br />
-          <div className={styles.borderLine}></div>
-          <br />
-          <h2>Talk Notes</h2>
-          <ul className={styles.containerList}>
-            <li>
-              <a
-                className={styles.whitelink}
-                href="https://ad-site.netlify.app/static/Sheaf_Cohomology_Intro.pdf"
-              >
-                Basic Sheaf Cohomology
-              </a>{" "}
-            </li>
-          </ul> */}
         </div>
       </main>
     </>
