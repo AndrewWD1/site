@@ -22,7 +22,7 @@ export default function Home() {
               {"I'm"} a graduate student in the math department at CU-Boulder.
             </li>
             <li>
-              I study symplectic manifolds and my advisor is Professor Markus
+              I study geometry (primarily symplectic manifolds and singular spaces) and my advisor is Professor Markus
               Pflaum.
             </li>
             <li>
